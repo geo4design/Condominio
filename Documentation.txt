@@ -1,0 +1,146 @@
+Condominium Payment Notification Generator
+This script provides a web interface using Streamlit to parse payment voucher text, extract key details, and generate a formatted payment notification message which can be copied to the clipboard.
+
+Requirements
+Python: Version 3.7 or higher recommended.
+
+pip: Python's package installer (usually comes with Python).
+
+(Linux Only) Clipboard utility: xclip or xsel for the copy-to-clipboard functionality.
+
+Installation Steps
+Install Python:
+
+If you don't have Python installed, download it from the official Python website.
+
+During installation on Windows, make sure to check the box that says "Add Python to PATH".
+
+Verify the installation by opening your terminal or command prompt and typing:
+
+python --version
+# or on some systems
+python3 --version
+Use code with caution.
+Bash
+You should see the installed Python version printed. Also verify pip:
+
+pip --version
+# or
+pip3 --version
+Use code with caution.
+Bash
+Create a Project Folder:
+
+Create a new folder on your computer where you want to store the script.
+
+Copy the Python script file (e.g., voucher_parser.py) into this folder.
+
+Set Up a Virtual Environment (Recommended):
+
+Open your terminal or command prompt.
+
+Navigate into the project folder you just created:
+
+cd path/to/your/project-folder
+Use code with caution.
+Bash
+(Replace path/to/your/project-folder with the actual path).
+
+Create a virtual environment named venv:
+
+python -m venv venv
+# or on some systems
+python3 -m venv venv
+Use code with caution.
+Bash
+Activate the virtual environment:
+
+Windows (Command Prompt):
+
+.\venv\Scripts\activate
+Use code with caution.
+Bash
+Windows (PowerShell):
+
+.\venv\Scripts\Activate.ps1
+Use code with caution.
+Powershell
+(If you get an error about execution policies, you might need to run Set-ExecutionPolicy RemoteSigned -Scope Process first and then try activating again).
+
+macOS / Linux:
+
+source venv/bin/activate
+Use code with caution.
+Bash
+Your terminal prompt should now change, often showing (venv) at the beginning, indicating the virtual environment is active.
+
+Install Required Python Libraries:
+
+While the virtual environment is active, install the necessary libraries: streamlit and pyperclip.
+
+Method 1: Using requirements.txt (Best Practice)
+
+Create a file named requirements.txt in your project folder with the following content:
+
+streamlit
+pyperclip
+Use code with caution.
+Run the installation command:
+
+pip install -r requirements.txt
+Use code with caution.
+Bash
+Method 2: Direct Installation
+
+If you don't want to create a requirements.txt file, run:
+
+pip install streamlit pyperclip
+Use code with caution.
+Bash
+(Linux Only) Install Clipboard Utility:
+
+The pyperclip library needs a system utility to interact with the clipboard on Linux. Install one of them using your package manager.
+
+Debian/Ubuntu:
+
+sudo apt-get update
+sudo apt-get install xclip
+# or sudo apt-get install xsel
+Use code with caution.
+Bash
+Fedora:
+
+sudo dnf install xclip
+# or sudo dnf install xsel
+Use code with caution.
+Bash
+Windows and macOS usually do not require this extra step.
+
+Running the Script
+Make sure you are in your project directory in the terminal.
+
+Make sure your virtual environment is active (you should see (venv) in your prompt).
+
+Run the Streamlit application using the following command (replace voucher_parser.py with the actual name of your script file if different):
+
+streamlit run voucher_parser.py
+Use code with caution.
+Bash
+Streamlit will start a local web server, and the application should automatically open in your default web browser. If it doesn't, the terminal will provide you with Local URL: and Network URL: addresses - copy and paste the Local URL (usually http://localhost:8501) into your browser.
+
+Paste the voucher text into the text area and click "Generar Notificación".
+
+Click "Copiar Notificación" to copy the generated text to your clipboard.
+
+Stopping the Application
+Go back to the terminal window where the script is running.
+
+Press Ctrl + C.
+
+Deactivating the Virtual Environment
+When you are finished working on the project, you can deactivate the virtual environment by simply typing:
+
+deactivate
+Use code with caution.
+Bash
+You will need to reactivate it (Step 3) the next time you want to run the script.
